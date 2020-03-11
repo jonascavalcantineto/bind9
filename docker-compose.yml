@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+    bind9:
+        build: .
+        container_name: bind9
+        hostname: bind9
+        restart: always
+        network_mode: "host"
+        ports: 
+            - 53:53
+            - 53:53/udp
+        
+ 

@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+        name: svc-bind9
+spec:
+        selector:
+                app: bind9-app
+        ports:
+              - name: bind9-tcp53
+                protocol: TCP
+                port: 53
+                nodePort: 53
+                targetPort: 53
+              - name: bind9-udp53
+                protocol: UDP
+                port: 53
+                nodePort: 53
+---
+apiVersion: extensions/v1beta1
+kind: Deployment 
+metadata:
+  name: bind9-dpt-prod
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  template:
+    metadata:
+      annotations:
+          kubernetes.io/change-cause: "Recreat all DNS server"
+      labels:
+        app: bind9-app
+    spec:
+      containers:
+      - name: bind9-con
+        image: dkhub.funceme.br:444/unisp/bind9
+        ports:
+        - name: bind9-tcp53
+          containerPort: 53
+        - name: bind9-udp53
+          containerPort: 53
+        imagePullPolicy: Always
+      imagePullSecrets:      
+      - name: dkhub.funceme.br-registry-secret
