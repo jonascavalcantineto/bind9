@@ -21,6 +21,6 @@ worker4		IN A		10.11.2.7
 lb			CNAME	    bastion1
 api			CNAME		bastion1
 api-int		CNAME		bastion1
-*.app		CNAME		bastion1
+*.apps		CNAME		bastion1
 
 _etcd-server-ssl._tcp	IN SRV	0	10	2380	etcd-0
