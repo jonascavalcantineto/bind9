@@ -11,7 +11,7 @@ $TTL 3600	; 1 hour
 ns1			IN A		10.11.2.3
 master1		IN A		10.11.2.2
 etcd-0		IN A		10.11.2.2
-bastion01	IN A		10.11.2.3
+bastion1	IN A		10.11.2.3
 worker1		IN A		10.11.2.4
 worker2		IN A		10.11.2.5
 worker3		IN A		10.11.2.6
@@ -23,4 +23,4 @@ api			CNAME		bastion01
 api-int		CNAME		bastion01
 *.api		CNAME		bastion01
 
-_etcd-server-ssl._tcp	IN 	SRV	0	10	2380	 etcd-0
+_etcd-server-ssl._tcp	IN SRV	0	10	2380	etcd-0
