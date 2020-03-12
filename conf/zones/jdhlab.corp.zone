@@ -8,19 +8,25 @@ $TTL 3600	; 1 hour
 				)
 @			IN 	NS	ns1
 
+;Proxy LoadBalancers
 ns1			IN A		10.11.2.3
+bastion1	IN A		10.11.2.3
+lb			IN A		10.11.2.3
+
+;Control Plannel (Masters Servers)
 master1		IN A		10.11.2.2
 etcd-0		IN A		10.11.2.2
-bastion1	IN A		10.11.2.3
+
+;Workers
 worker1		IN A		10.11.2.4
 worker2		IN A		10.11.2.5
 worker3		IN A		10.11.2.6
 worker4		IN A		10.11.2.7
 
+;OCP|Kubernestes API  and APPS
+api			CNAME		lb
+api-int		CNAME		lb
+*.apps		CNAME		lb
 
-lb			CNAME	    bastion1
-api			CNAME		bastion1
-api-int		CNAME		bastion1
-*.apps		CNAME		bastion1
-
+; ETCDs services 
 _etcd-server-ssl._tcp	IN SRV	0	10	2380	etcd-0
