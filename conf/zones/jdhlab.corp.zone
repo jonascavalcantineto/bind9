@@ -10,8 +10,8 @@ $TTL 3600	; 1 hour
 
 ;Proxy LoadBalancers
 ns1			IN A		10.11.2.3
-bastion1	IN A		10.11.2.3
-lb			IN A		10.11.2.3
+bastion		IN A		10.11.2.3
+;lb			IN A		10.11.2.3
 
 ;Control Plannel (Masters Servers)
 master1		IN A		10.11.2.2
@@ -23,10 +23,16 @@ worker2		IN A		10.11.2.5
 worker3		IN A		10.11.2.6
 worker4		IN A		10.11.2.7
 
+;OCP|Kubernestes API  and APPS whithout LoadBalancer
+api			CNAME		master1
+api-int		CNAME		master1
+*.apps		A			10.11.2.4
+			A			10.11.2.5
+
 ;OCP|Kubernestes API  and APPS
-api			CNAME		lb
-api-int		CNAME		lb
-*.apps		CNAME		lb
+;api			CNAME		lb
+;api-int		CNAME		lb
+;*.apps		CNAME		lb
 
 ; ETCDs services 
 _etcd-server-ssl._tcp	IN SRV	0	10	2380	etcd-0
