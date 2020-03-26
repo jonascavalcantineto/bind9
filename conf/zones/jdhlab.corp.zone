@@ -11,7 +11,7 @@ $TTL 3600	; 1 hour
 ;Proxy LoadBalancers
 ns1			IN A		10.11.2.3
 bastion		IN A		10.11.2.3
-openshift-bastion CNAME bastion
+openshift-bastion-container CNAME bastion
 ;lb			IN A		10.11.2.3
 
 ;Control Plannel (Masters Servers)
