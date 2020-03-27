@@ -11,12 +11,14 @@ $TTL 3600	; 1 hour
 ;Proxy LoadBalancers
 ns1			IN A		10.11.2.3
 bastion		IN A		10.11.2.3
-openshift-bastion-container CNAME bastion
+
 ;lb			IN A		10.11.2.3
 
 ;Control Plannel (Masters Servers)
-master1		IN A		10.11.2.2
-etcd-0		IN A		10.11.2.2
+master1			IN A		10.11.2.2
+ose				IN A		10.11.2.2
+ose-internal	IN A		10.11.2.2
+etcd-0			IN A		10.11.2.2
 
 ;Workers
 worker1		IN A		10.11.2.4
@@ -30,6 +32,7 @@ api-int		CNAME		master1
 *.apps		A			10.11.2.4
 			A			10.11.2.5
 
+openshift-bastion CNAME bastion
 ;OCP|Kubernestes API  and APPS
 ;api			CNAME		lb
 ;api-int		CNAME		lb
