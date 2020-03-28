@@ -38,15 +38,15 @@ zone "0.in-addr.arpa" IN {
 	allow-update { none; };
 };
 
-zone "ocp.jdhlab.corp" IN {
+zone "ocp.jdhlabs.com.br" IN {
 	type master;
-	file "jdhlab.corp.zone";
+	file "jdhlabs.com.br.zone";
 	allow-update { none; };
 };
 
 zone "2.11.10.in-addr.arpa" IN {
 	type master;
-	file "rev.10.11.2.jdhlab";
+	file "rev.10.11.2.jdhlabs";
 	allow-update { none; };
 };
 

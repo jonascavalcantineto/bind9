@@ -1,5 +1,5 @@
 $TTL 3600	; 1 hour
-@	IN SOA	ocp.jdhlab.corp. netmaster.ocp.jdhlab.corp. (
+@	IN SOA	ocp.jdhlabs.com.br. netmaster.ocp.jdhlabs.com.br. (
 				2020030501 ; serial
 				86400      ; refresh (1 day)
 				3600       ; retry (1 hour)
