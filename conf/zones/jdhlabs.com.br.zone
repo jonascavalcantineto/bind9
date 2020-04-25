@@ -12,6 +12,7 @@ $TTL 3600	; 1 hour
 ns1			IN A		10.11.2.3
 bastion		IN A		10.11.2.3
 nfs			CNAME		bastion
+lb			CNAME		bastion
 ;lb			IN A		10.11.2.3
 
 ;Control Plannel (Masters Servers)
