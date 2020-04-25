@@ -11,7 +11,7 @@ $TTL 3600	; 1 hour
 ;Proxy LoadBalancers
 ns1			IN A		10.11.2.3
 bastion		IN A		10.11.2.3
-
+nfs			CNAME		bastion
 ;lb			IN A		10.11.2.3
 
 ;Control Plannel (Masters Servers)
@@ -22,9 +22,13 @@ etcd-0			IN A		10.11.2.2
 
 ;Workers
 worker1		IN A		10.11.2.4
+infra1		CNAME		worker1
 worker2		IN A		10.11.2.5
+infra2		CNAME		worker2
 worker3		IN A		10.11.2.6
+apps1		CNAME		worker3
 worker4		IN A		10.11.2.7
+apps2		CNAME		worker4
 
 ;OCP|Kubernestes API  and APPS whithout LoadBalancer
 api			CNAME		master1
