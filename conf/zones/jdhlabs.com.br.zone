@@ -34,10 +34,10 @@ apps2		CNAME		worker4
 
 ;OCP|Kubernestes API  and APPS whithout LoadBalancer
 etcd-0		IN A		10.11.2.2
-api			IN A		10.11.2.4
+api			IN A		10.11.2.2
 ;			IN A  		10.11.2.2
 
-api-int		IN A		10.11.2.4
+api-int		IN A		10.11.2.2
 ;			IN A  		10.11.2.2
 
 *.apps		A			10.11.2.5
