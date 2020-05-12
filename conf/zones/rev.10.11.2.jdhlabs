@@ -1,19 +1,21 @@
 $ORIGIN .
 $TTL 3600	; 1 hour
-2.11.10.in-addr.arpa	IN SOA	ns1.ocp.jdhlab.corp. netmaster.ocp.jdhlab.corp. (
+2.11.10.in-addr.arpa	IN SOA	ns1.ocp.jdhlabs.com.br. netmaster.ocp.jdhlabs.com.br. (
 				2020030501 ; serial
 				86400      ; refresh (1 day)
 				3600       ; retry (1 hour)
 				86400      ; expire (1 day)
 				3600       ; minimum (1 hour)
 				)
-			NS	ns1.ocp.jdhlab.corp.
+			NS	ns1.ocp.jdhlabs.com.br.
 
 $ORIGIN 2.11.10.in-addr.arpa.
 
-2		PTR	master1.ocp.jdhlab.corp.
-4		PTR	worker1.ocp.jdhlab.corp.
-5		PTR	worker2.ocp.jdhlab.corp.
-6		PTR	worker3.ocp.jdhlab.corp.
-7		PTR	worker4.ocp.jdhlab.corp.
+2		PTR	master1.ocp.jdhlabs.com.br.
+3		PTR bastion.ocp.jdhlabs.com.br.
+4		PTR	bootstrap.ocp.jdhlabs.com.br.
+5		PTR	worker1.ocp.jdhlabs.com.br.
+6		PTR	worker2.ocp.jdhlabs.com.br.
+7		PTR	worker3.ocp.jdhlabs.com.br.
+8		PTR	worker4.ocp.jdhlabs.com.br.
 
