@@ -33,8 +33,9 @@ worker4		IN A		10.11.2.8
 apps2		CNAME		worker4
 
 ;OCP|Kubernestes API  and APPS whithout LoadBalancer
-api			CNAME		master1
-api-int		CNAME		master1
+api			CNAME		bootstrap
+api-int		CNAME		bootstrap
+
 *.apps		A			10.11.2.5
 			A			10.11.2.6
 
