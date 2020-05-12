@@ -20,7 +20,7 @@ lb			CNAME		bastion
 master1			IN A		10.11.2.2
 ose				IN A		10.11.2.2
 ose-internal	IN A		10.11.2.2
-etcd-0			IN A		10.11.2.2
+
 
 ;Workers
 worker1		IN A		10.11.2.5
@@ -33,11 +33,12 @@ worker4		IN A		10.11.2.8
 apps2		CNAME		worker4
 
 ;OCP|Kubernestes API  and APPS whithout LoadBalancer
-api			A		10.11.2.4
-;			A  		10.11.2.2
+etcd-0		IN A		10.11.2.4
+api			IN A		10.11.2.4
+;			IN A  		10.11.2.2
 
-api-int		A		10.11.2.4
-;			A  		10.11.2.2
+api-int		IN A		10.11.2.4
+;			IN A  		10.11.2.2
 
 *.apps		A			10.11.2.5
 			A			10.11.2.6
