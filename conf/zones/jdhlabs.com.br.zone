@@ -18,6 +18,7 @@ lb			CNAME		bastion
 
 ;Control Plannel (Masters Servers)
 master1			IN A		10.11.2.2
+etcd-0			IN A		10.11.2.2
 ose				IN A		10.11.2.2
 ose-internal	IN A		10.11.2.2
 
@@ -33,15 +34,11 @@ worker4		IN A		10.11.2.8
 apps2		CNAME		worker4
 
 ;OCP|Kubernestes API  and APPS whithout LoadBalancer
-etcd-0		IN A		10.11.2.2
-api			IN A		10.11.2.4
-			IN A  		10.11.2.2
+api			IN A		10.11.2.3
+api-int		IN A		10.11.2.3
 
-api-int		IN A		10.11.2.4
-			IN A  		10.11.2.2
-
-*.apps		A			10.11.2.5
-			A			10.11.2.6
+*.apps		IN A			10.11.2.5
+			IN A			10.11.2.6
 
 openshift-bastion CNAME bastion
 ;OCP|Kubernestes API  and APPS
