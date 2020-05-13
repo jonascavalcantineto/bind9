@@ -12,6 +12,8 @@ $TTL 3600	; 1 hour
 $ORIGIN 2.11.10.in-addr.arpa.
 
 2		PTR	master1.ocp.jdhlabs.com.br.
+3		PTR api.ocp.jdhlabs.com.br.
+3		PTR api-int.ocp.jdhlabs.com.br.
 3		PTR bastion.ocp.jdhlabs.com.br.
 4		PTR	bootstrap.ocp.jdhlabs.com.br.
 5		PTR	worker1.ocp.jdhlabs.com.br.
