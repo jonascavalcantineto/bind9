@@ -38,7 +38,7 @@ zone "0.in-addr.arpa" IN {
 	allow-update { none; };
 };
 
-zone "ocp.jdhlabs.com.br" IN {
+zone "jdhlabs.com.br" IN {
 	type master;
 	file "jdhlabs.com.br.zone";
 	allow-update { none; };
