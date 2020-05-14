@@ -25,9 +25,9 @@ etcd-0.ocp		IN A	10.11.2.2
 etcd-1.ocp		IN A	10.11.2.9
 etcd-2.ocp		IN A	10.11.2.12
 ; ETCDs services 
-_etcd-server-ssl._tcp	86400 	IN SRV	0	10	2380	etcd-0.ocp.jdhlabs.com.br
-_etcd-server-ssl._tcp	86400 	IN SRV	0	10	2380	etcd-1.ocp.jdhlabs.com.br
-_etcd-server-ssl._tcp	86400 	IN SRV	0	10	2380	etcd-2.ocp.jdhlabs.com.br
+_etcd-server-ssl._tcp	86400 	IN SRV	0	10	2380	etcd-0.ocp
+_etcd-server-ssl._tcp	86400 	IN SRV	0	10	2380	etcd-1.ocp
+_etcd-server-ssl._tcp	86400 	IN SRV	0	10	2380	etcd-2.ocp
 
 ;Workers
 worker1.ocp		IN A	10.11.2.5
