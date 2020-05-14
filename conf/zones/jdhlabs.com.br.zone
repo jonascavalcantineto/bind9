@@ -19,6 +19,7 @@ lb			CNAME		bastion
 ;Control Plannel (Masters Servers)
 master1			IN A		10.11.2.2
 etcd-0			IN A		10.11.2.2
+etcd-master1	IN A		10.11.2.2
 ose				IN A		10.11.2.2
 ose-internal	IN A		10.11.2.2
 
