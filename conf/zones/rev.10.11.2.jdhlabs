@@ -12,6 +12,7 @@ $TTL 3600	; 1 hour
 $ORIGIN 	2.11.10.in-addr.arpa.
 
 3		PTR lb.ocp.jdhlabs.com.br.
+3		PTR	nfs.ocp.jdhlabs.com.br.
 2		PTR	master1.ocp.jdhlabs.com.br.
 9		PTR	master2.ocp.jdhlabs.com.br.
 12		PTR	master3.ocp.jdhlabs.com.br.

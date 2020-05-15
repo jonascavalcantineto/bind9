@@ -13,6 +13,7 @@ ns1				IN A	10.11.2.3
 
 installer.ocp	IN A	10.11.2.3
 lb.ocp			IN A	10.11.2.3
+nfs.ocp			IN A	10.11.2.3
 
 ;Control Plannel (Masters Servers)
 bootstrap.ocp	IN A	10.11.2.4
